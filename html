@@ -9,6 +9,20 @@
 </head>
 <body>
     <span id="clock">3:00</span>
-    <script src="javascript.js"></script>
+    <script>
+    /////Countdown//////
+    $timer = 5; // set time (in second)
+    function counter() {
+        if ($timer == 0) {
+            clearInterval(counter); //Action on time end here
+        } else {
+            $timer--;
+            $timer_min=Math.floor($timer/60);
+            $timer_sec=Math.floor($timer%60);
+            $('#clock').html($timer_min+":"+$timer_sec); //#clock is the id where the time will be shown
+        }
+    }
+    setInterval(counter, 1000);
+    </script>
 </body>
 </html>
