@@ -12,7 +12,7 @@
     <script>
     /////Countdown//////
     $(document).ready(function () {
-        $timer = 5; // set time (in second)
+        $timer = 180; // set time (in second)
         function counter() {
             if ($timer == 0) {
                 clearInterval(counter); //Action on time end here
